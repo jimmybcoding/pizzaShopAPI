@@ -152,7 +152,7 @@ app.put('/orders/:id/complete', findOrder, priceCalculation, (req, res) => {
         req.order.isComplete = true;
 
         // Send back the updated order with the price
-        res.status(200).json({ message: `Order ID: ${req.order.id} marked as complete. Total price: ${req.order.price}`, order: req.order });
+        res.status(200).json({ message: `Order ID: ${req.order.id} marked as complete. Total price: $${req.order.price}`, order: req.order });
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' });
     }
