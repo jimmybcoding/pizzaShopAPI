@@ -1,0 +1,8 @@
+ Initially, I ran into problems when testing the requests simply because I forgot to restart the server, not due to issues with the actual code. To avoid this, I installed Nodemon.
+
+When writing the requests, I realized by the third time I was writing out my function to find the order inside the request that I needed to keep the code DRY. So, I implemented a middleware function. My two middleware functions were probably the biggest challenge to tinker with and get working. Initially, I was trying to call the functions inside the requests. The Express docs helped greatly with implementing them correctly using next().
+
+Once I had all the requests and responses working, I re-read the instructions and then went back to implement try/catch blocks and 500 error handling to improve error management.
+
+For security, I chose to validate size, toppings, and quantity using predefined arrays. This should reduce the risk of injection attacks. I also implemented a check in my modify order request to determine if the order is already completed.
+

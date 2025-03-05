@@ -1,0 +1,31 @@
+### POST New Order
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "size": "large",
+    "toppings": ["pepperoni", "mushroom", "sausage"],
+    "quantity": 10
+}
+
+### GET All Orders
+GET http://localhost:3000/orders
+
+### GET a Specific Order by ID
+GET http://localhost:3000/orders/06df1125-f4c2-40e0-be25-8aea3a98dab8
+
+### PUT modify an existing order /orders/{id}
+PUT http://localhost:3000/orders/06df1125-f4c2-40e0-be25-8aea3a98dab8
+Content-Type: application/json
+
+{
+    "size": "medium",
+    "toppings": ["ham", "pineapple", "mushroom"],
+    "quantity": 2
+}
+
+### DELETE cancel an existing order /orders/{id}
+DELETE http://localhost:3000/orders/06df1125-f4c2-40e0-be25-8aea3a98dab8
+
+### PUT mark an existing order complete /orders/{id}/complete
+PUT http://localhost:3000/orders/06df1125-f4c2-40e0-be25-8aea3a98dab8/complete
