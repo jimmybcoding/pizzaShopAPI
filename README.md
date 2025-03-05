@@ -18,7 +18,9 @@ Node.js (version 14 or higher)
 Clone the repository and navigate into the project folder:
 
 git clone https://github.com/jimmybcoding/pizzaShopAPI.git
+
 cd pizzaShopAPI
+
 Install Dependencies
 Run the following command to install the necessary dependencies:
 npm install
